@@ -40,7 +40,7 @@ public class GenerateObject : MonoBehaviour
     public static string RandomString()
     {
         int length = random.Next(9, 16);
-        const string chars = "(a2)";
+        const string chars = "(a7)";
         string abc = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         return "x" + abc;
     }
