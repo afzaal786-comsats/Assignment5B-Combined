@@ -41,7 +41,8 @@ public class GenerateObject : MonoBehaviour
     {
         int length = random.Next(9, 16);
         const string chars = "(a7)";
-        string abc = new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
+        string abc = new string(Enumerable.Repeat(chars, length)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
         return "x" + abc;
     }
 
@@ -49,7 +50,7 @@ public class GenerateObject : MonoBehaviour
     IEnumerator DropSpawn()
     {
         //GameObject randomText = new GameObject("Collectible Text");
-        while (spawnCount <= 42)
+        while (spawnCount <= 47)
         {
 
             xPos = Random.Range(-23, 23);
